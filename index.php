@@ -15,7 +15,7 @@
 	<title>HW_PHP1</title>
 </head>
 <body>
-	<p></p>
+	<p>Домашняя работа №1</p>
 	<form action="/" method="post">
 		Красный цвет: <input type="number" min="0" max="255" name="red"  method="post"><br><br>
 		Зеленый цвет: <input type="number" min="0" max="255" name="green"  method="post"><br><br>

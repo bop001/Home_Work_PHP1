@@ -3,8 +3,8 @@
 	$green = $_POST['green'];
 	$blue = $_POST['blue'];
 	$colorText = "#000";
-	if (!empty($_POST)) {
-		$colorText = "#fff";
+	if (!empty($_POST['red']) and !empty($_POST['green']) and !empty($_POST['blue']) and $colorText == "#000") {
+		$colorText = "#fff"; //не понял как чтобы не окрашевалась, когда не пустой запрос, чтобы в одну переменную, с запятыми...
 	}
 ?>
 
@@ -24,5 +24,43 @@
 		<span style="background-color: rgb(<?php echo $red; ?>, <?php echo $green; ?>, <?php echo $blue; ?>); color:<?php echo $colorText;?>">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae labore hic rem cumque. Illum dolorum soluta doloremque, deleniti excepturi fugiat, ut ex provident sunt libero voluptatem quo tempora, inventore, molestiae.</span>
 	</form>
 
+	<p>Домашняя работа №2</p>
+	<p>Выберите месяц текущего года:</p>
+	<div class="box-button">
+		<form action="index.php" method="post">
+			<input type="radio" id="1" name="month" value="1">
+			<label for="1">Январь</label>
+			<input type="radio" id="2" name="month" value="2">
+			<label for="2">Февраль</label>
+			<input type="radio" id="3" name="month" value="3">
+			<label for="3">Март</label>
+			<input type="radio" id="4" name="month" value="4">
+			<label for="4">Апрель</label>
+			<input type="radio" id="5" name="month" value="5">
+			<label for="5">Май</label>
+			<input type="radio" id="6" name="month" value="6">
+			<label for="6">Июнь</label>
+			<input type="radio" id="7" name="month" value="7">
+			<label for="7">Июль</label>
+			<input type="radio" id="8" name="month" value="8">
+			<label for="8">Август</label>
+			<input type="radio" id="9" name="month" value="9">
+			<label for="9">Сентябрь</label>
+			<input type="radio" id="10" name="month" value="10">
+			<label for="10">Октябрь</label>
+			<input type="radio" id="11" name="month" value="11">
+			<label for="11">Ноябрь</label>
+			<input type="radio" id="12" name="month" value="12">
+			<label for="12">Декабрь</label><br><br>
+			<input type="submit" value="Посмотреть">
+		</form>
+	</div>
+	<?php
+		$month_num = $_POST['month'];
+		if (!empty($month_num)) {
+			echo $month_num;
+		}
+		
+	?>
 </body>
 </html>
